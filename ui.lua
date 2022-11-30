@@ -51,7 +51,7 @@ function Library:Initiate()
     MainFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     MainFrame.BorderSizePixel = 0
     MainFrame.Position = UDim2.new(0.5, -350, 0.5, -200)
-    MainFrame.Size = UDim2.new(0, 500, 0, 260)
+    MainFrame.Size = UDim2.new(0, 600, 0, 360)
     UICorner_17.Parent = MainFrame
     UICorner_17.CornerRadius=UDim.new(0,6)
     
