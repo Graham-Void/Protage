@@ -1,4 +1,3 @@
-local Players = game:GetService("Players")
 local Library={};
 local HelpSections={}
 getgenv().PlayerDropType='Both'
