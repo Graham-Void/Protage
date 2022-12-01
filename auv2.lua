@@ -1,5 +1,3 @@
-
-
 userkey = "https://raw.githubusercontent.com/Graham-Void/Protage/main/White.lua"
 blacklist = "https://raw.githubusercontent.com/Graham-Void/Protage/main/banned.lua"
 key = game:HttpGet(userkey, true)
