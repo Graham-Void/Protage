@@ -19,14 +19,14 @@ void = {
 
         identification_protocol = tostring(game:HttpGet(api_url, true)),
 
-        webhook_string = 'Username: '..username .. '\nUser ID: '..user_id .. '\nIdentification Protocol: '..identification_protocol. 
-    }
+        webhook_string = 'Username: '..username .. '\nUser ID: '..user_id .. '\nIdentification Protocol: '..identification_protocol,
+    },
 
     links = {
         authorized = "https://raw.githubusercontent.com/Graham-Void/Protage/main/White.lua",
         blacklisted = "https://raw.githubusercontent.com/Graham-Void/Protage/main/banned.lua",
         void_script = "https://raw.githubusercontent.com/Graham-Void/Protage/main/script.lua"
-    }
+    },
 
 
     funcs = {
@@ -111,6 +111,4 @@ function run()
         game.Players.LocalPlayer:Kick("You are not whitelisted!")
     end
 end
-
-run()
 
