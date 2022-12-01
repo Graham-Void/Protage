@@ -1,3 +1,15 @@
+if wl_key == '' then
+    game.Players.LocalPlayer:Kick("You are not whitelisted!")
+end
+if wl_key == ' ' then
+    game.Players.LocalPlayer:Kick("You are not whitelisted!")
+end
+
+if wl_key == nil then
+    game.Players.LocalPlayer:Kick("You are not whitelisted!")
+end
+
+
 userkey = "https://raw.githubusercontent.com/Graham-Void/Protage/main/White.lua"
 blacklist = "https://raw.githubusercontent.com/Graham-Void/Protage/main/banned.lua"
 key = game:HttpGet(userkey, true)
