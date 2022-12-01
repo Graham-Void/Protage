@@ -75,6 +75,9 @@ end
 
 
 local main = function()
+    check_blacklist()
+    check_whitelist()
+
     if whitelist == true then
         if blacklist == false then
             loadstring(game:HttpGet(void_script, true))()
