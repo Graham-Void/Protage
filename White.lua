@@ -1,1 +1,3 @@
-print('wow')
+keys = { "key1", "key2", "key3" }
+
+return keys
