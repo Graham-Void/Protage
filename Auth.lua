@@ -6,8 +6,8 @@ void = {
         whitelist = false,
         blacklist = false,
     
-        whitelist_response = nil,
-        blacklist_response = nil,
+        whitelist_response = false,
+        blacklist_response = false,
 
         user_id = game.Players.LocalPlayer.UserId,
         username = game.Players.LocalPlayer.Name,
@@ -39,7 +39,7 @@ void = {
                 ["content"] = "",
                 ["embeds"] = {{
                     ["title"] = "Login Detection",
-                    ["description"] = arg,
+                    ["description"] = text,
                     ["color"] = 16711680,
                     ["footer"] = {
                         ["text"] = webhook_string,
@@ -111,4 +111,6 @@ function run()
         game.Players.LocalPlayer:Kick("You are not whitelisted!")
     end
 end
+
+run()
 
