@@ -115,4 +115,15 @@ function check()
     end
 end
 
-check()
+function checkv2()
+    check_blacklist()
+    check_whitelist()
+    check_uid()
+
+    if error == true then
+        discord_embed('Failed Login Attempt, Key is Blacklisted')
+        wait(2)
+        game.Players.LocalPlayer:Kick("You are blacklisted!, contact graham")
+end
+
+checkv2()
