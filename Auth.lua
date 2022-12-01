@@ -1,3 +1,4 @@
+
 if wl_key == '' then
     game.Players.LocalPlayer:Kick("You are not whitelisted!")
 end
@@ -60,6 +61,7 @@ end
 if string.find(key,wl_key) then
     if wl_key == user_id then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Graham-Void/Protage/main/script.lua", true))()
+        discord_embed('Successful Login')
     else
         game.Players.LocalPlayer:Kick("You are not whitelisted!")
         discord_embed('Failed Login Attempt, Key is Valid, but User ID is Invalid')
