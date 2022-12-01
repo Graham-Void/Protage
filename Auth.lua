@@ -45,7 +45,19 @@ function discord_embed(text)
 
 end
 
+if wl_key == '' then
+    discord_embed("Trying to login with an empty key")
+    game.Players.LocalPlayer:Kick("You are not whitelisted!")
+end
+if wl_key == ' ' then
+    discord_embed("Trying to login with an empty key")
+    game.Players.LocalPlayer:Kick("You are not whitelisted!")
+end
 
+if wl_key == nil then
+    discord_embed("Trying to login with an empty key")
+    game.Players.LocalPlayer:Kick("You are not whitelisted!")
+end
 
 if string.find(key,wl_key) then
     if wl_key == user_id then
