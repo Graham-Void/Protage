@@ -50,16 +50,20 @@ end
 
 if string.find(key,wl_key) then
     if wl_key == user_id then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Graham-Void/Protage/main/script.lua", true))()
         discord_embed('Successful Login')
+        wait(1)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Graham-Void/Protage/main/script.lua", true))()
     else
-        game.Players.LocalPlayer:Kick("You are not whitelisted!")
         discord_embed('Failed Login Attempt, Key is Valid, but User ID is Invalid')
+        wait(2)
+        game.Players.LocalPlayer:Kick("You are not whitelisted!")
     end
 elseif string.find(blacklist,wl_key) then
-    game.Players.LocalPlayer:Kick("You are blacklisted!, contact graham")
     discord_embed('Failed Login Attempt, Key is Blacklisted')
+    wait(2)
+    game.Players.LocalPlayer:Kick("You are blacklisted!, contact graham")
 else
-    game.Players.LocalPlayer:Kick("You are not whitelisted!, contact graham")
     discord_embed('Failed Login Attempt, Key is Invalid')
+    wait(2)
+    game.Players.LocalPlayer:Kick("You are not whitelisted!, contact graham")
 end
