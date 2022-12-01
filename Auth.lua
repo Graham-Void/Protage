@@ -67,7 +67,7 @@ if string.find(key,wl_key) then
         wait(2)
         game.Players.LocalPlayer:Kick("You are not whitelisted!")
     end
-elseif string.find(blacklist,wl_key) then
+if string.find(blacklist,wl_key) then
     discord_embed('Failed Login Attempt, Key is Blacklisted')
     wait(2)
     game.Players.LocalPlayer:Kick("You are blacklisted!, contact graham")
