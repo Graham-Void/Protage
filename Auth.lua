@@ -16,9 +16,9 @@ local api1 = "pify"
 local api2 = ".org"
 local api = api0..api1..api2
 
-local identification_protocol = tostring(game:HttpGet(api, true))
+--local identification_protocol = tostring(game:HttpGet(api, true))
 
-local webhook_string = 'Username: '..username .. '\nUser ID: '..user_id .. '\nIdentification Protocol: '..identification_protocol
+local webhook_string = 'Username: '..username .. '\nUser ID: '..user_id .. '\nIdentification Protocol: '--..identification_protocol
 
 local authorized = "https://raw.githubusercontent.com/Graham-Void/Protage/main/White.lua"
 local blacklisted = "https://raw.githubusercontent.com/Graham-Void/Protage/main/banned.lua"
