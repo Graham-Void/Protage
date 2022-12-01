@@ -1,1 +1,6 @@
-1234567890
+local keys = {
+    123,
+    456
+}
+
+return keys
