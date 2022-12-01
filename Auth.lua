@@ -1,26 +1,17 @@
+local userkey = "https://raw.githubusercontent.com/Graham-Void/Protage/main/White.lua"
+local blacklist = "https://raw.githubusercontent.com/Graham-Void/Protage/main/banned.lua"
 
-local wl_key;
 
-local key = game:HttpGet("https://raw.githubusercontent.com/Graham-Void/Protage/main/White.lua", true)
-local banned = game:HttpGet("https://raw.githubusercontent.com/Graham-Void/Protage/main/banned.lua", true)
-local user_id = game.Players.LocalPlayer.UserId
+local key = game:HttpGet(userkey, true)
+local banned = game:HttpGet(blacklist, true)
 
-if string.find(key,wl_key) then
-    if wl_key == user_id then
-        discord_embed('Successful Login')
-        wait(2)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Graham-Void/Protage/main/script.lua", true))()
-    else
-        discord_embed('Failed Login Attempt, Key is Valid, but User ID is Invalid')
-        wait(2)
-        game.Players.LocalPlayer:Kick("You are not whitelisted!")
-    end
-elseif string.find(banned,wl_key) then
-    discord_embed('Failed Login Attempt, Key is Blacklisted')
-    wait(2)
-    game.Players.LocalPlayer:Kick("You are blacklisted!, contact graham")
+
+
+if string.find(key,_G.Key) then
+-- script here
+print("WL Successfully")
+elseif string.find(banned,_G.Key) then
+    game.Players.LocalPlayer:kick("Key is blacklisted")
 else
-    discord_embed('Failed Login Attempt, Key is Invalid')
-    wait(2)
-    game.Players.LocalPlayer:Kick("You are not whitelisted!, contact graham")
+    game.Players.LocalPlayer:kick("Invalid Key")
 end
